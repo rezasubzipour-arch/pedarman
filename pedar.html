@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 مرتضی سبزی‌پور | جشن تولد</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/vazirmatn@latest/fa-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/vazirmatn@latest/fa-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/vazirmatn@latest/fa-900-normal.css">
+<style>
+/* ============================================
+   SECTION 1: CORE VARIABLES & RESET
+   ============================================ */
+:root {
+    --c-pink: #ff6b9d;
+    --c-pink-light: #ff9ec0;
+    --c-pink-dark: #e0457a;
+    --c-purple: #c06eff;
+    --c-purple-light: #dbb3ff;
+    --c-purple-dark: #9b3fd9;
+    --c-blue: #3742fa;
+    --c-blue-light: #6b73ff;
+    --c-cyan: #00d4ff;
+    --c-cyan-light: #66e3ff;
+    --c-orange: #ffa502;
+    --c-orange-light: #ffc048;
+    --c-yellow: #ffd93d;
+    --c-green: #2ed573;
+    --c-red: #ff4757;
+    --bg-dark: #0f0e17;
+    --bg-darker: #05040a;
+    --bg-card: rgba(26, 26, 46, 0.6);
+    --bg-card-hover: rgba(36, 36, 66, 0.8);
+    --text-main: #fffffe;
+    --text-muted: #a7a9be;
+    --text-dim: #6b6d82;
+    --grad-main: linear-gradient(135deg, var(--c-pink) 0%, var(--c-purple) 50%, var(--c-blue) 100%);
+    --grad-sunset: linear-gradient(135deg, var(--c-orange) 0%, var(--c-pink) 50%, var(--c-purple) 100%);
+    --grad-ocean: linear-gradient(135deg, var(--c-cyan) 0%, var(--c-blue) 50%, var(--c-purple) 100%);
+    --grad-fire: linear-gradient(135deg, var(--c-red) 0%, var(--c-orange) 50%, var(--c-yellow) 100%);
+    --grad-glow: radial-gradient(circle, rgba(192,110,255,0.4) 0%, rgba(0,0,0,0) 70%);
+    --grad-mesh-1: radial-gradient(at 20% 30%, rgba(255,107,157,0.2) 0%, transparent 50%);
+    --grad-mesh-2: radial-gradient(at 80% 20%, rgba(192,110,255,0.2) 0%, transparent 50%);
+    --grad-mesh-3: radial-gradient(at 50% 80%, rgba(55,66,250,0.2) 0%, transparent 50%);
+    --shadow-sm: 0 4px 15px rgba(0,0,0,0.3);
+    --shadow-md: 0 10px 40px rgba(0,0,0,0.4);
+    --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
+    --shadow-neon: 0 0 20px rgba(192,110,255,0.5), 0 0 60px rgba(255,107,157,0.3);
+    --shadow-neon-strong: 0 0 30px rgba(192,110,255,0.7), 0 0 80px rgba(255,107,157,0.5);
+    --font-main: 'Vazirmatn', sans-serif;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 100px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.8;
+    cursor: none;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ============================================
+   SECTION 2: SCROLLBAR STYLING
+   ============================================ */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-darker);
+    border-left: 1px solid rgba(255,255,255,0.03);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--grad-main);
+    border-radius: 5px;
+    border: 2px solid var(--bg-darker);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--grad-sunset);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--bg-darker);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-purple) var(--bg-darker);
+}
+
+/* ============================================
+   SECTION 3: CUSTOM CURSOR SYSTEM
+   ============================================ */
+.cursor-dot,
+.cursor-ring,
+.cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 99999;
+    mix-blend-mode: difference;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--c-pink);
+    border-radius: 50%;
+    transition: transform 0.1s ease;
+}
+
+.cursor-ring {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--c-purple);
+    border-radius: 50%;
+    transition: width 0.3s var(--ease-out),
+                height 0.3s var(--ease-out),
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.cursor-ring.hovered {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.08);
+    border-color: var(--c-cyan);
+}
+
+.cursor-ring.clicking {
+    width: 30px;
+    height: 30px;
+    border-color: var(--c-pink);
+    background: rgba(255,107,157,0.2);
+}
+
+.cursor-trail {
+    width: 6px;
+    height: 6px;
+    background: var(--c-purple);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cursor-trail.active {
+    opacity: 0.6;
+}
+
+/* ============================================
+   SECTION 4: LOADING SCREEN
+   ============================================ */
+.loader-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-darker);
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease, visibility 1s;
+}
+
+.loader-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-logo {
+    font-size: 5rem;
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 8px;
+    animation: pulseLogo 2s ease-in-out infinite;
+    text-shadow: 0 0 40px rgba(192,110,255,0.3);
+}
+
+.loader-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.loader-bar-container {
+    width: 350px;
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    margin-top: 50px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-bar-progress {
+    height: 100%;
+    width: 0%;
+    background: var(--grad-main);
+    transition: width 0.1s linear;
+    position: relative;
+}
+
+.loader-bar-progress::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--c-pink), 0 0 30px var(--c-purple);
+}
+
+.loader-percent {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--c-pink);
+    font-variant-numeric: tabular-nums;
+}
+
+@keyframes pulseLogo {
+    0%, 100% { opacity: 0.6; transform: scale(1); filter: brightness(1); }
+    50% { opacity: 1; transform: scale(1.05); filter: brightness(1.2); }
+}
+
+/* ============================================
+   SECTION 5: NAVIGATION
+   ============================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.4s var(--ease-out);
+}
+
+.navbar.scrolled {
+    padding: 15px 60px;
+    background: rgba(15, 14, 23, 0.92);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.nav-brand {
+    font-size: 1.6rem;
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.nav-brand::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--grad-main);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s var(--ease-out);
+}
+
+.nav-brand:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--c-pink);
+    transition: width 0.3s var(--ease-out);
+    white-space: nowrap;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: var(--c-pink);
+    transition: width 0.3s var(--ease-out);
+}
+
+.nav-links a:hover {
+    color: var(--c-pink);
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--c-pink);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.mobile-toggle span {
+    width: 30px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s var(--ease-out);
+    transform-origin: center;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ============================================
+   SECTION 6: HERO SECTION
+   ============================================ */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 60px 80px;
+    overflow: hidden;
+}
+
+.hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(192, 110, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(192, 110, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    z-index: 0;
+}
+
+.hero-bg-mesh {
+    position: absolute;
+    inset: 0;
+    background: var(--grad-mesh-1), var(--grad-mesh-2), var(--grad-mesh-3);
+    z-index: 0;
+    animation: meshFloat 20s ease-in-out infinite;
+}
+
+@keyframes meshFloat {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+    33% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+    66% { transform: scale(0.95) rotate(-1deg); opacity: 0.9; }
+}
+
+.hero-glow {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background: var(--grad-glow);
+    filter: blur(100px);
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    animation: breathe 8s ease-in-out infinite;
+}
+
+.hero-glow-secondary {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,107,157,0.3) 0%, transparent 70%);
+    filter: blur(80px);
+    opacity: 0.4;
+    top: 30%;
+    left: 30%;
+    z-index: 0;
+    animation: breathe 10s ease-in-out infinite reverse;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.25); opacity: 0.7; }
+}
+
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--c-pink);
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-text {
+    position: relative;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 28px;
+    background: rgba(255, 107, 157, 0.08);
+    border: 1px solid rgba(255, 107, 157, 0.25);
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    color: var(--c-pink);
+    margin-bottom: 35px;
+    backdrop-filter: blur(15px);
+    width: fit-content;
+    animation: fadeSlideUp 1s var(--ease-out) 0.2s both;
+}
+
+.hero-badge .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--c-pink);
+    border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+    box-shadow: 0 0 10px var(--c-pink);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.hero-title {
+    font-size: clamp(3.5rem, 7vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 35px;
+    letter-spacing: -3px;
+}
+
+.hero-title .line {
+    display: block;
+    overflow: hidden;
+}
+
+.hero-title .line-inner {
+    display: block;
+    animation: revealLine 1.2s var(--ease-out) both;
+}
+
+.hero-title .line:nth-child(1) .line-inner { animation-delay: 0.4s; }
+.hero-title .line:nth-child(2) .line-inner { animation-delay: 0.6s; }
+.hero-title .line:nth-child(3) .line-inner { animation-delay: 0.8s; }
+
+@keyframes revealLine {
+    from { transform: translateY(120%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hero-title .gradient {
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.hero-title .gradient::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(20px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.hero-title .outline {
+    -webkit-text-stroke: 2px var(--c-purple);
+    color: transparent;
+    position: relative;
+}
+
+.hero-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin-bottom: 50px;
+    line-height: 2;
+    animation: fadeSlideUp 1s var(--ease-out) 1s both;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeSlideUp 1s var(--ease-out) 1.2s both;
+}
+
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+    padding: 18px 44px;
+    border-radius: var(--radius-full);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-out);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn-primary {
+    background: var(--grad-main);
+    color: white;
+    box-shadow: var(--shadow-neon);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: var(--shadow-neon-strong);
+}
+
+.btn-primary:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.2);
+}
+
+.btn-outline:hover {
+    border-color: var(--c-pink);
+    color: var(--c-pink);
+    background: rgba(255,107,157,0.05);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255,107,157,0.2);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s var(--ease-bounce);
+}
+
+.btn:hover .btn-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Hero Visual Stack */
+.hero-visual {
+    position: relative;
+    height: 680px;
+    perspective: 1200px;
+    animation: fadeSlideUp 1.2s var(--ease-out) 0.6s both;
+}
+
+.photo-stack {
+    position: absolute;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(255,255,255,0.1);
+    transition: transform 0.6s var(--ease-out), box-shadow 0.4s ease, z-index 0s;
+    will-change: transform;
+}
+
+.photo-stack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out);
+}
+
+.photo-stack::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,107,157,0.1) 0%, transparent 50%, rgba(192,110,255,0.1) 100%);
+    pointer-events: none;
+}
+
+.ps-1 {
+    width: 340px;
+    height: 440px;
+    top: 8%;
+    right: 5%;
+    z-index: 3;
+    transform: rotate(6deg);
+    border-color: var(--c-pink);
+}
+
+.ps-2 {
+    width: 280px;
+    height: 360px;
+    top: 22%;
+    right: 32%;
+    z-index: 2;
+    transform: rotate(-8deg);
+    border-color: var(--c-purple);
+}
+
+.ps-3 {
+    width: 220px;
+    height: 280px;
+    bottom: 5%;
+    right: 12%;
+    z-index: 4;
+    transform: rotate(12deg);
+    border-color: var(--c-cyan);
+}
+
+.photo-stack:hover {
+    z-index: 10 !important;
+    box-shadow: var(--shadow-neon-strong);
+}
+
+.photo-stack:hover img {
+    transform: scale(1.08);
+}
+
+.floating-tag {
+    position: absolute;
+    background: rgba(15,14,23,0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 18px 28px;
+    border-radius: var(--radius-md);
+    z-index: 5;
+    animation: floatTag 6s ease-in-out infinite;
+    box-shadow: var(--shadow-md);
+}
+
+.ft-1 { top: 0; left: 0; animation-delay: 0s; }
+.ft-2 { bottom: 12%; left: 8%; animation-delay: 2s; }
+.ft-3 { top: 40%; right: -20px; animation-delay: 4s; }
+
+@keyframes floatTag {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(1deg); }
+    75% { transform: translateY(10px) rotate(-1deg); }
+}
+
+.ft-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.ft-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    animation: fadeSlideUp 1s var(--ease-out) 1.5s both;
+}
+
+.scroll-text {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--c-pink), transparent);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: white;
+    animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+    0% { top: -50%; }
+    100% { top: 150%; }
+}
+
+/* ============================================
+   SECTION 7: COUNTDOWN TIMER
+   ============================================ */
+.timer-section {
+    padding: 140px 60px;
+    background: var(--bg-darker);
+    position: relative;
+    overflow: hidden;
+}
+
+.timer-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(192,110,255,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(255,107,157,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(55,66,250,0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.timer-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--c-purple), var(--c-pink), var(--c-blue), transparent);
+    opacity: 0.3;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 90px;
+    position: relative;
+    z-index: 2;
+}
+
+.sec-tag {
+    font-size: 0.9rem;
+    color: var(--c-pink);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+
+.sec-tag::before,
+.sec-tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--c-pink), transparent);
+}
+
+.sec-tag::before { right: 100%; transform: rotate(180deg); }
+.sec-tag::after { left: 100%; }
+
+.sec-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.sec-title span {
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.sec-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 25px auto 0;
+    line-height: 1.9;
+}
+
+.timer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.timer-box {
+    background: var(--bg-card);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: 55px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-out), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.timer-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--grad-main);
+    opacity: 0.8;
+}
+
+.timer-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(192,110,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.timer-box:hover {
+    transform: translateY(-12px);
+    border-color: rgba(255,107,157,0.3);
+    box-shadow: 0 25px 60px rgba(255,107,157,0.15);
+}
+
+.t-num {
+    font-size: 5.5rem;
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 15px;
+    font-variant-numeric: tabular-nums;
+    position: relative;
+    z-index: 1;
+}
+
+.t-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.timer-separator {
+    display: none;
+}
+
+/* ============================================
+   SECTION 8: EDITORIAL BIO
+   ============================================ */
+.editorial {
+    padding: 200px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.editorial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(192,110,255,0.2), transparent);
+}
+
+.ed-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    align-items: center;
+}
+
+.ed-images {
+    position: relative;
+    height: 850px;
+}
+
+.ed-img {
+    position: absolute;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-neon);
+    border: 3px solid rgba(255,255,255,0.08);
+    transition: transform 0.6s var(--ease-out);
+}
+
+.ed-img:hover {
+    transform: scale(1.02);
+}
+
+.ed-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-out);
+}
+
+.ed-img:hover img {
+    transform: scale(1.05);
+}
+
+.ed-i1 {
+    width: 78%;
+    height: 72%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    border-color: rgba(255,107,157,0.3);
+}
+
+.ed-i2 {
+    width: 62%;
+    height: 55%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-color: rgba(192,110,255,0.3);
+}
+
+.ed-blob {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--c-pink);
+    filter: blur(130px);
+    opacity: 0.35;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    animation: blobPulse 8s ease-in-out infinite;
+}
+
+@keyframes blobPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.35; }
+    50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.5; }
+}
+
+.ed-content {
+    position: relative;
+}
+
+.ed-content .big-num {
+    font-size: 12rem;
+    font-weight: 900;
+    line-height: 0.8;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.15;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -60px;
+    right: -20px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ed-content h2 {
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 35px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
+}
+
+.ed-content h2 em {
+    font-style: normal;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ed-content p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 28px;
+    line-height: 2.1;
+    position: relative;
+    z-index: 1;
+}
+
+.ed-content p::first-letter {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--c-pink);
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 55px;
+    padding-top: 55px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    transition: background 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.stat-n {
+    font-size: 3.2rem;
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-l {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   SECTION 9: MEMORIES FLIP CARDS
+   ============================================ */
+.memories {
+    padding: 200px 60px;
+    background: var(--bg-darker);
+    position: relative;
+}
+
+.memories::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 20%, rgba(255,107,157,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(192,110,255,0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.mem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.mem-card {
+    height: 440px;
+    perspective: 1200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.mem-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s var(--ease-out);
+    transform-style: preserve-3d;
+}
+
+.mem-card.flipped .mem-inner {
+    transform: rotateY(180deg);
+}
+
+.mem-front,
+.mem-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.mem-front {
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mem-card:hover .mem-front {
+    border-color: rgba(255,107,157,0.2);
+    box-shadow: 0 15px 40px rgba(255,107,157,0.1);
+}
+
+.mem-icon {
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 25px rgba(255,107,157,0.5));
+    animation: iconFloat 4s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.mem-front h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mem-front p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.mem-hint {
+    position: absolute;
+    bottom: 28px;
+    font-size: 0.8rem;
+    color: var(--c-pink);
+    opacity: 0.6;
+    letter-spacing: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.mem-card:hover .mem-hint {
+    opacity: 1;
+}
+
+.mem-back {
+    background: var(--grad-main);
+    transform: rotateY(180deg);
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.mem-back::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.mem-quote {
+    font-size: 4.5rem;
+    line-height: 1;
+    opacity: 0.4;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+}
+
+.mem-back p {
+    font-size: 1.15rem;
+    line-height: 2;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.mem-author {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SECTION 10: HORIZONTAL TIMELINE
+   ============================================ */
+.timeline {
+    padding: 200px 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(192,110,255,0.2), transparent);
+}
+
+.tl-scroll {
+    overflow-x: auto;
+    padding: 80px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-pink) var(--bg-darker);
+    -webkit-overflow-scrolling: touch;
+}
+
+.tl-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tl-scroll::-webkit-scrollbar-track {
+    background: var(--bg-darker);
+    border-radius: 3px;
+}
+
+.tl-scroll::-webkit-scrollbar-thumb {
+    background: var(--grad-main);
+    border-radius: 3px;
+}
+
+.tl-track {
+    display: flex;
+    gap: 45px;
+    padding: 20px 60px;
+    min-width: max-content;
+    position: relative;
+}
+
+.tl-track::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--c-pink), var(--c-purple), var(--c-blue), var(--c-cyan));
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.tl-item {
+    width: 340px;
+    background: var(--bg-card);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s var(--ease-out);
+    flex-shrink: 0;
+}
+
+.tl-item:hover {
+    transform: translateY(-18px);
+    border-color: rgba(255,107,157,0.3);
+    box-shadow: 0 25px 60px rgba(255,107,157,0.2);
+}
+
+.tl-item:nth-child(even) {
+    transform: translateY(70px);
+}
+
+.tl-item:nth-child(even):hover {
+    transform: translateY(52px);
+}
+
+.tl-badge {
+    display: inline-block;
+    padding: 8px 22px;
+    background: var(--grad-main);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px rgba(192,110,255,0.3);
+}
+
+.tl-item h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.tl-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.tl-dot {
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 26px;
+    height: 26px;
+    background: var(--grad-main);
+    border-radius: 50%;
+    border: 4px solid var(--bg-dark);
+    box-shadow: 0 0 25px var(--c-pink);
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.tl-dot::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* ============================================
+   SECTION 11: GALLERY COLLAGE
+   ============================================ */
+.gallery {
+    padding: 200px 60px;
+    background: var(--bg-darker);
+    position: relative;
+}
+
+.gallery::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(192,110,255,0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.gal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    gap: 18px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.gal-item {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s var(--ease-out);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.gal-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s var(--ease-out);
+}
+
+.gal-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15,14,23,0.9) 0%, rgba(15,14,23,0.3) 40%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gal-item::before {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 2.5rem;
+    z-index: 3;
+    transition: transform 0.4s var(--ease-bounce);
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.5));
+}
+
+.gal-item:hover {
+    transform: scale(1.03);
+    z-index: 2;
+    box-shadow: var(--shadow-neon);
+    border-color: rgba(255,107,157,0.3);
+}
+
+.gal-item:hover img {
+    transform: scale(1.15);
+}
+
+.gal-item:hover::after {
+    opacity: 1;
+}
+
+.gal-item:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.gal-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.gal-item:nth-child(4) { grid-row: span 2; }
+.gal-item:nth-child(6) { grid-column: span 2; }
+
+/* ============================================
+   SECTION 12: LETTER SECTION
+   ============================================ */
+.letter-sec {
+    padding: 200px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.letter-sec::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 30%, rgba(255,107,157,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 70%, rgba(192,110,255,0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.letter-container {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.envelope {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    perspective: 1500px;
+}
+
+.env-body {
+    background: var(--bg-card);
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-xl);
+    padding: 80px 70px;
+    position: relative;
+    text-align: right;
+    transition: transform 0.5s var(--ease-out), box-shadow 0.5s ease;
+}
+
+.env-body:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-neon);
+}
+
+.env-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--grad-main);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.env-body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-xl);
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.l-stamp {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 90px;
+    height: 90px;
+    border: 2px dashed var(--c-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    transform: rotate(-15deg);
+    opacity: 0.5;
+    transition: transform 0.5s var(--ease-bounce), opacity 0.3s ease;
+}
+
+.env-body:hover .l-stamp {
+    transform: rotate(0deg) scale(1.1);
+    opacity: 0.8;
+}
+
+.l-date {
+    font-size: 0.9rem;
+    color: var(--c-pink);
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.l-greet {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.l-body p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 2.5;
+    margin-bottom: 28px;
+    text-align: justify;
+}
+
+.l-sign {
+    margin-top: 55px;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--c-pink);
+    position: relative;
+    display: inline-block;
+}
+
+.l-sign::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--grad-main);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s var(--ease-out);
+}
+
+.env-body:hover .l-sign::before {
+    transform: scaleX(1);
+}
+
+/* ============================================
+   SECTION 13: WISHES BOARD
+   ============================================ */
+.wishes {
+    padding: 200px 60px;
+    background: var(--bg-darker);
+    position: relative;
+}
+
+.wishes::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(255,107,157,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(192,110,255,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.w-form {
+    max-width: 700px;
+    margin: 0 auto 90px;
+    background: var(--bg-card);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-xl);
+    padding: 55px;
+    position: relative;
+    z-index: 1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.w-form:focus-within {
+    border-color: rgba(255,107,157,0.2);
+    box-shadow: 0 20px 60px rgba(255,107,157,0.1);
+}
+
+.f-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.f-input,
+.f-textarea {
+    width: 100%;
+    padding: 20px 28px;
+    background: rgba(15,14,23,0.6);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s var(--ease-out);
+    direction: rtl;
+}
+
+.f-input::placeholder,
+.f-textarea::placeholder {
+    color: var(--text-dim);
+}
+
+.f-input:focus,
+.f-textarea:focus {
+    outline: none;
+    border-color: var(--c-pink);
+    box-shadow: 0 0 30px rgba(255,107,157,0.15), inset 0 0 20px rgba(255,107,157,0.05);
+    background: rgba(15,14,23,0.8);
+}
+
+.f-textarea {
+    min-height: 160px;
+    resize: vertical;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.sticky-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.sticky-note {
+    padding: 38px;
+    border-radius: var(--radius-md);
+    position: relative;
+    transition: all 0.4s var(--ease-out);
+    animation: popIn 0.6s var(--ease-bounce) both;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: translateY(40px) rotate(-8deg) scale(0.8); }
+    to { opacity: 1; transform: translateY(0) rotate(var(--r, 0deg)) scale(1); }
+}
+
+.sn-1 { background: linear-gradient(135deg, #ff6b9d, #ff9ec0); --r: -2deg; }
+.sn-2 { background: linear-gradient(135deg, #c06eff, #dbb3ff); --r: 2deg; }
+.sn-3 { background: linear-gradient(135deg, #00d4ff, #8aeaff); --r: -1.5deg; }
+.sn-4 { background: linear-gradient(135deg, #ffa502, #ffcf5c); --r: 3deg; }
+.sn-5 { background: linear-gradient(135deg, #2ed573, #7bed9f); --r: -3deg; }
+.sn-6 { background: linear-gradient(135deg, #ff4757, #ff6b81); --r: 1.5deg; }
+
+.sticky-note:hover {
+    transform: rotate(0) scale(1.08) translateY(-10px) !important;
+    z-index: 5;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+}
+
+.sticky-note::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 45px;
+    height: 22px;
+    background: rgba(255,255,255,0.45);
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.sticky-note::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 25px 25px;
+    border-color: transparent transparent rgba(0,0,0,0.1) transparent;
+    border-radius: 0 0 var(--radius-md) 0;
+}
+
+.sn-name {
+    font-weight: 900;
+    font-size: 1.15rem;
+    color: rgba(0,0,0,0.85);
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 2px dashed rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sn-text {
+    color: rgba(0,0,0,0.75);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+/* ============================================
+   SECTION 14: FOOTER
+   ============================================ */
+.footer {
+    padding: 120px 60px 50px;
+    background: var(--bg-darker);
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(192,110,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.f-big {
+    font-size: clamp(3rem, 12vw, 11rem);
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    line-height: 0.9;
+    margin-bottom: 70px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.f-big::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(30px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.f-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-top: 45px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.f-brand {
+    font-size: 1.4rem;
+    font-weight: 900;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.f-copy {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.f-heart {
+    color: var(--c-pink);
+    display: inline-block;
+    animation: beat 1.5s ease-in-out infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.3); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.2); }
+    60% { transform: scale(1); }
+}
+
+.f-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.f-social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s var(--ease-out);
+    color: var(--text-muted);
+}
+
+.f-social-link:hover {
+    border-color: var(--c-pink);
+    color: var(--c-pink);
+    background: rgba(255,107,157,0.1);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   SECTION 15: UTILITIES & ANIMATIONS
+   ============================================ */
+.progress-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--grad-main);
+    z-index: 10000;
+    box-shadow: 0 0 15px var(--c-pink), 0 0 30px var(--c-purple);
+    transition: width 0.1s linear;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+    transition: all 1.2s var(--ease-out);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-l {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: all 1.2s var(--ease-out);
+}
+
+.reveal-l.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-r {
+    opacity: 0;
+    transform: translateX(70px);
+    transition: all 1.2s var(--ease-out);
+}
+
+.reveal-r.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 1s var(--ease-out);
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.toast {
+    position: fixed;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40px);
+    padding: 20px 45px;
+    background: rgba(15,14,23,0.95);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid var(--c-pink);
+    border-radius: var(--radius-full);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 10001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s var(--ease-out);
+    box-shadow: var(--shadow-neon);
+    white-space: nowrap;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--grad-main);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s var(--ease-out);
+    box-shadow: var(--shadow-neon);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-neon-strong);
+}
+
+/* ============================================
+   SECTION 16: RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1200px) {
+    .hero-content { gap: 60px; }
+    .ed-container { gap: 80px; }
+    .hero-title { font-size: clamp(3rem, 6vw, 6rem); }
+    .ed-content h2 { font-size: 3rem; }
+}
+
+@media (max-width: 1024px) {
+    .hero-content,
+    .ed-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        height: 480px;
+        margin-top: 60px;
+    }
+
+    .ed-images {
+        height: 550px;
+        order: -1;
+    }
+
+    .timer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gal-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .gal-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+    .gal-item:nth-child(4) { grid-row: span 1; }
+    .gal-item:nth-child(6) { grid-column: span 1; }
+
+    .navbar { padding: 25px 40px; }
+    .navbar.scrolled { padding: 15px 40px; }
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 20px 25px; }
+    .navbar.scrolled { padding: 15px 25px; }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        height: 100vh;
+        background: rgba(5,4,10,0.98);
+        backdrop-filter: blur(35px);
+        -webkit-backdrop-filter: blur(35px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.5s var(--ease-out);
+        gap: 30px;
+        border-left: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav-links.open { right: 0; }
+    .nav-links a { font-size: 1.3rem; }
+    .mobile-toggle { display: flex; }
+
+    .hero,
+    .editorial,
+    .memories,
+    .timeline,
+    .gallery,
+    .letter-sec,
+    .wishes,
+    .timer-section {
+        padding: 100px 25px;
+    }
+
+    .footer { padding: 80px 25px 35px; }
+
+    .stats-row { grid-template-columns: 1fr; gap: 25px; }
+    .f-row { grid-template-columns: 1fr; }
+    .env-body { padding: 45px 30px; }
+
+    .cursor-dot,
+    .cursor-ring,
+    .cursor-trail {
+        display: none !important;
+    }
+
+    body { cursor: auto; }
+
+    .timer-grid { gap: 15px; }
+    .t-num { font-size: 3.2rem; }
+    .timer-box { padding: 35px 15px; }
+
+    .ps-1 { width: 240px; height: 320px; }
+    .ps-2 { width: 190px; height: 250px; right: 28%; }
+    .ps-3 { width: 160px; height: 210px; }
+
+    .hero-title { letter-spacing: -1px; }
+    .ed-content .big-num { font-size: 7rem; }
+    .ed-content h2 { font-size: 2.4rem; }
+    .sec-title { font-size: 2.2rem; }
+    .l-greet { font-size: 1.8rem; }
+    .f-big { margin-bottom: 50px; }
+
+    .floating-tag { padding: 12px 18px; }
+    .ft-num { font-size: 1.6rem; }
+    .ft-3 { display: none; }
+
+    .back-to-top { bottom: 25px; left: 25px; width: 48px; height: 48px; font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-desc { font-size: 1.05rem; }
+    .btn { padding: 15px 32px; font-size: 0.9rem; }
+    .ed-content .big-num { font-size: 5rem; top: -30px; }
+    .ed-content h2 { font-size: 2rem; }
+    .sec-title { font-size: 1.8rem; }
+    .sec-tag { font-size: 0.75rem; letter-spacing: 3px; }
+    .mem-card { height: 380px; }
+    .mem-icon { font-size: 3.5rem; }
+    .t-num { font-size: 2.5rem; }
+    .t-label { font-size: 0.75rem; letter-spacing: 2px; }
+    .sticky-note { padding: 28px; }
+    .sn-name { font-size: 1rem; }
+    .sn-text { font-size: 0.9rem; }
+    .l-greet { font-size: 1.5rem; }
+    .l-body p { font-size: 1rem; line-height: 2.2; }
+    .f-big { font-size: clamp(2.5rem, 10vw, 5rem); }
+    .gal-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+    .gal-item:nth-child(1),
+    .gal-item:nth-child(4),
+    .gal-item:nth-child(6) { grid-column: span 1; grid-row: span 1; }
+    .tl-item { width: 280px; padding: 30px; }
+    .w-form { padding: 35px 25px; }
+    .loader-logo { font-size: 3.5rem; }
+    .loader-bar-container { width: 250px; }
+}
+
+/* ============================================
+   SECTION 17: PRINT STYLES
+   ============================================ */
+@media print {
+    .cursor-dot, .cursor-ring, .cursor-trail,
+    .loader-screen, .progress-line, .toast,
+    .back-to-top, .scroll-indicator,
+    .hero-bg-grid, .hero-bg-mesh, .hero-glow,
+    .hero-glow-secondary, .hero-particles,
+    .nav-links, .mobile-toggle { display: none !important; }
+
+    body { background: white; color: black; cursor: auto; }
+    .hero { min-height: auto; padding: 40px 20px; }
+    .navbar { position: static; padding: 20px; background: white; }
+    section { padding: 40px 20px !important; }
+    .timer-box, .mem-front, .tl-item, .env-body, .w-form { 
+        background: white; border: 1px solid #ccc; backdrop-filter: none; 
+    }
+    .hero-title .gradient, .sec-title span, .stat-n, .t-num,
+    .ed-content h2 em, .l-greet, .f-big, .nav-brand, .f-brand {
+        -webkit-text-fill-color: #333; background: none;
+    }
+}
+
+/* ============================================
+   SECTION 18: ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal, .reveal-l, .reveal-r, .reveal-scale {
+        opacity: 1; transform: none;
+    }
+}
+
+:focus-visible {
+    outline: 3px solid var(--c-pink);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     LOADER
+     ============================================ -->
+<div class="loader-screen" id="loader" role="alert" aria-live="polite">
+    <div class="loader-logo">M.S</div>
+    <div class="loader-subtitle">جشن تولد مرتضی سبزی‌پور</div>
+    <div class="loader-bar-container">
+        <div class="loader-bar-progress" id="loaderBar"></div>
+    </div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+</div>
+
+<!-- ============================================
+     CUSTOM CURSOR
+     ============================================ -->
+<div class="cursor-dot" id="cDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cRing" aria-hidden="true"></div>
+
+<!-- ============================================
+     PROGRESS LINE
+     ============================================ -->
+<div class="progress-line" id="progLine" aria-hidden="true"></div>
+
+<!-- ============================================
+     TOAST NOTIFICATION
+     ============================================ -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ============================================
+     BACK TO TOP
+     ============================================ -->
+<button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا" title="بازگشت به بالا">↑</button>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="منوی اصلی">
+    <div class="nav-brand">M.S ✦ BIRTHDAY</div>
+    <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#hero" role="menuitem" data-text="خانه">خانه</a></li>
+        <li role="none"><a href="#timer" role="menuitem" data-text="شمارش">شمارش</a></li>
+        <li role="none"><a href="#about" role="menuitem" data-text="درباره">درباره</a></li>
+        <li role="none"><a href="#memories" role="menuitem" data-text="خاطرات">خاطرات</a></li>
+        <li role="none"><a href="#timeline" role="menuitem" data-text="مسیر">مسیر</a></li>
+        <li role="none"><a href="#gallery" role="menuitem" data-text="گالری">گالری</a></li>
+        <li role="none"><a href="#letter" role="menuitem" data-text="نامه">نامه</a></li>
+        <li role="none"><a href="#wishes" role="menuitem" data-text="آرزوها">آرزوها</a></li>
+    </ul>
+    <div class="mobile-toggle" id="mobToggle" role="button" aria-label="منو" aria-expanded="false" tabindex="0">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- ============================================
+     HERO SECTION
+     ============================================ -->
+<section class="hero" id="hero" aria-label="بخش اصلی">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-bg-mesh" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-glow-secondary" aria-hidden="true"></div>
+    <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-badge reveal">
+                <span class="dot" aria-hidden="true"></span>
+                <span>امروز یه روز خاصه</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line"><span class="line-inner">تولد</span></span>
+                <span class="line"><span class="line-inner"><span class="gradient">مرتضی</span></span></span>
+                <span class="line"><span class="line-inner"><span class="outline">سبزی‌پور</span></span></span>
+            </h1>
+            <p class="hero-desc reveal">
+                امروز روزیه که دنیا یه مرد واقعی رو به خودش دید. مردی که با قلب طلاییش، زندگی ما رو روشن می‌کنه. تولدت مبارک پدر جان ✨
+            </p>
+            <div class="hero-btns reveal">
+                <a href="#letter" class="btn btn-primary">
+                    <span class="btn-icon" aria-hidden="true">✉️</span>
+                    <span>نامه به پدر</span>
+                </a>
+                <a href="#memories" class="btn btn-outline">
+                    <span class="btn-icon" aria-hidden="true">🎂</span>
+                    <span>خاطرات ما</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="تصاویر پدر">
+            <div class="photo-stack ps-1"><img src="pedar2.jpg" alt="عکس پدر ۱" loading="lazy"></div>
+            <div class="photo-stack ps-2"><img src="pedar.jpg" alt="عکس پدر ۲" loading="lazy"></div>
+            <div class="photo-stack ps-3"><img src="pedar5.jpg" alt="عکس پدر ۳" loading="lazy"></div>
+            <div class="floating-tag ft-1" aria-hidden="true">
+                <div class="ft-num">∞</div>
+                <div class="ft-label">عشق بی‌پایان</div>
+            </div>
+            <div class="floating-tag ft-2" aria-hidden="true">
+                <div class="ft-num">#1</div>
+                <div class="ft-label">بهترین پدر</div>
+            </div>
+            <div class="floating-tag ft-3" aria-hidden="true">
+                <div class="ft-num">❤️</div>
+                <div class="ft-label">همیشه در قلب</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-text">اسکرول</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ============================================
+     COUNTDOWN TIMER (5 MINUTES)
+     ============================================ -->
+<section class="timer-section" id="timer" aria-label="شمارش معکوس">
+    <div class="section-header">
+        <span class="sec-tag reveal">⏰ شمارش معکوس</span>
+        <h2 class="sec-title reveal">جشن تولد <span>در راه است</span></h2>
+        <p class="sec-subtitle reveal">زمان باقی‌مانده تا لحظه‌ی ویژه‌ی جشن</p>
+    </div>
+    <div class="timer-grid" role="timer" aria-live="polite">
+        <div class="timer-box reveal">
+            <div class="t-num" id="tDays" aria-label="روز">00</div>
+            <div class="t-label">روز</div>
+        </div>
+        <div class="timer-box reveal">
+            <div class="t-num" id="tHours" aria-label="ساعت">00</div>
+            <div class="t-label">ساعت</div>
+        </div>
+        <div class="timer-box reveal">
+            <div class="t-num" id="tMins" aria-label="دقیقه">00</div>
+            <div class="t-label">دقیقه</div>
+        </div>
+        <div class="timer-box reveal">
+            <div class="t-num" id="tSecs" aria-label="ثانیه">00</div>
+            <div class="t-label">ثانیه</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     EDITORIAL BIO
+     ============================================ -->
+<section class="editorial" id="about" aria-label="درباره پدر">
+    <div class="ed-container">
+        <div class="ed-images reveal-l">
+            <div class="ed-blob" aria-hidden="true"></div>
+            <div class="ed-img ed-i1"><img src="pedar2.jpg" alt="تصویر پدر" loading="lazy"></div>
+            <div class="ed-img ed-i2"><img src="pedar4.png" alt="تصویر پدر" loading="lazy"></div>
+        </div>
+        <div class="ed-content reveal-r">
+            <div class="big-num" aria-hidden="true">01</div>
+            <h2>مردی از جنس <em>عشق و اصالت</em></h2>
+            <p>مرتضی سبزی‌پور فقط یه نام نیست، یه دنیاست. دنیایی از مهربانی، از ایثار، از عشق بی‌پایان. مردی که با هر لبخندش، دنیا رو زیباتر می‌کنه.</p>
+            <p>او ریشه‌های محکم خانواده ماست، سایه‌بانی که در گرمای سختی‌ها، خنکای آرامش رو به ما هدیه می‌ده. هر لحظه کنار او، یک درس بزرگ از زندگی است.</p>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-n">∞</div>
+                    <div class="stat-l">عشق</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-n">100%</div>
+                    <div class="stat-l">حمایت</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-n">24/7</div>
+                    <div class="stat-l">کنار ما</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     MEMORIES FLIP CARDS
+     ============================================ -->
+<section class="memories" id="memories" aria-label="خاطرات">
+    <div class="section-header">
+        <span class="sec-tag reveal">💭 لحظه‌های ناب</span>
+        <h2 class="sec-title reveal"><span>خاطراتی</span> که فراموش نمی‌شن</h2>
+        <p class="sec-subtitle reveal">روی هر کارت کلیک کن تا خاطره‌ای از پدر باز بشه</p>
+    </div>
+    <div class="mem-grid">
+        <div class="mem-card reveal" tabindex="0" role="button" aria-label="خاطره صبح‌های بهاری">
+            <div class="mem-inner">
+                <div class="mem-front">
+                    <div class="mem-icon" aria-hidden="true">🌅</div>
+                    <h3>صبح‌های بهاری</h3>
+                    <p>صبح‌هایی که با لبخند پدر شروع می‌شد</p>
+                    <div class="mem-hint">کلیک کن ←</div>
+                </div>
+                <div class="mem-back">
+                    <div class="mem-quote" aria-hidden="true">❝</div>
+                    <p>یادمه صبح‌ها زود بیدار می‌شد و با لبخندش روزمون رو روشن می‌کرد. اون لبخند، بهترین هدیه صبح بود.</p>
+                    <div class="mem-author">— خاطره‌ای از کودکی</div>
+                </div>
+            </div>
+        </div>
+        <div class="mem-card reveal" tabindex="0" role="button" aria-label="خاطره روزهای مدرسه">
+            <div class="mem-inner">
+                <div class="mem-front">
+                    <div class="mem-icon" aria-hidden="true">🎓</div>
+                    <h3>روزهای مدرسه</h3>
+                    <p>همراهی پدر در مسیر دانش</p>
+                    <div class="mem-hint">کلیک کن ←</div>
+                </div>
+                <div class="mem-back">
+                    <div class="mem-quote" aria-hidden="true">❝</div>
+                    <p>اولین روز مدرسه، دستم رو گرفت و باهام اومد. فهمیدم که هیچ‌وقت تنهام نمی‌ذاره.</p>
+                    <div class="mem-author">— اولین روز مدرسه</div>
+                </div>
+            </div>
+        </div>
+        <div class="mem-card reveal" tabindex="0" role="button" aria-label="خاطره سفرهای خانوادگی">
+            <div class="mem-inner">
+                <div class="mem-front">
+                    <div class="mem-icon" aria-hidden="true">🏔️</div>
+                    <h3>سفرهای خانوادگی</h3>
+                    <p>خاطرات شیرین سفر با پدر</p>
+                    <div class="mem-hint">کلیک کن ←</div>
+                </div>
+                <div class="mem-back">
+                    <div class="mem-quote" aria-hidden="true">❝</div>
+                    <p>سفرهایی که با پدر می‌رفتیم، پر از خنده و خاطره بود. اون یاد می‌داد چطور از لحظه‌ها لذت ببریم.</p>
+                    <div class="mem-author">— سفرهای به یادماندنی</div>
+                </div>
+            </div>
+        </div>
+        <div class="mem-card reveal" tabindex="0" role="button" aria-label="خاطره درس‌های زندگی">
+            <div class="mem-inner">
+                <div class="mem-front">
+                    <div class="mem-icon" aria-hidden="true">💬</div>
+                    <h3>درس‌های زندگی</h3>
+                    <p>حکمت‌هایی از پدر</p>
+                    <div class="mem-hint">کلیک کن ←</div>
+                </div>
+                <div class="mem-back">
+                    <div class="mem-quote" aria-hidden="true">❝</div>
+                    <p>هر شب قبل خواب، برام از زندگی می‌گفت. اون حرف‌ها، بهترین کلاس درس دنیا بودن.</p>
+                    <div class="mem-author">— شب‌های خاطره‌انگیز</div>
+                </div>
+            </div>
+        </div>
+        <div class="mem-card reveal" tabindex="0" role="button" aria-label="خاطره جشن‌های تولد">
+            <div class="mem-inner">
+                <div class="mem-front">
+                    <div class="mem-icon" aria-hidden="true">🎂</div>
+                    <h3>جشن‌های تولد</h3>
+                    <p>تولدهای پر از عشق</p>
+                    <div class="mem-hint">کلیک کن ←</div>
+                </div>
+                <div class="mem-back">
+                    <div class="mem-quote" aria-hidden="true">❝</div>
+                    <p>هر تولد، پدر با تمام وجودش جشن می‌گرفت. نه برای خودش، برای خوشحالی ما.</p>
+                    <div class="mem-author">— جشن‌های خانوادگی</div>
+                </div>
+            </div>
+        </div>
+        <div class="mem-card reveal" tabindex="0" role="button" aria-label="خاطره لحظه‌های سخت">
+            <div class="mem-inner">
+                <div class="mem-front">
+                    <div class="mem-icon" aria-hidden="true">🤝</div>
+                    <h3>لحظه‌های سخت</h3>
+                    <p>پدر در روزهای دشوار</p>
+                    <div class="mem-hint">کلیک کن ←</div>
+                </div>
+                <div class="mem-back">
+                    <div class="mem-quote" aria-hidden="true">❝</div>
+                    <p>وقتی دنیا سخت می‌شد، پدر مثل کوه پشت ما بود. اون یاد داد که هیچ طوفانی نمی‌تونه ما رو بشکنه.</p>
+                    <div class="mem-author">— روزهای سخت و شیرین</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     HORIZONTAL TIMELINE
+     ============================================ -->
+<section class="timeline" id="timeline" aria-label="مسیر زندگی">
+    <div class="section-header">
+        <span class="sec-tag reveal">📍 مسیر زندگی</span>
+        <h2 class="sec-title reveal"><span>لحظه‌هایی</span> که ساختیم</h2>
+        <p class="sec-subtitle reveal">← بکشید تا خاطرات رو مرور کنید</p>
+    </div>
+    <div class="tl-scroll" role="region" aria-label="تایم‌لاین قابل اسکرول" tabindex="0">
+        <div class="tl-track">
+            <div class="tl-item reveal">
+                <div class="tl-dot" aria-hidden="true"></div>
+                <div class="tl-badge">کودکی</div>
+                <h4>آغوش امن پدر</h4>
+                <p>وقتی کوچک بودم، شانه‌های پدر بلندترین نقطه دنیا بود. اونجا احساس امنیت مطلق می‌کردم.</p>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-dot" aria-hidden="true"></div>
+                <div class="tl-badge">مدرسه</div>
+                <h4>همراهی در تحصیل</h4>
+                <p>پدر همیشه مشوق درس خوندنم بود. نه با اجبار، با ایجاد انگیزه و عشق به یادگیری.</p>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-dot" aria-hidden="true"></div>
+                <div class="tl-badge">نوجوانی</div>
+                <h4>درس‌های مردانگی</h4>
+                <p>یاد گرفتم که مرد بودن به زور بازو نیست، به بزرگی روح و قلبه. اینو پدر بهم یاد داد.</p>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-dot" aria-hidden="true"></div>
+                <div class="tl-badge">جوانی</div>
+                <h4>پشتیبانی در تصمیم‌ها</h4>
+                <p>هر وقت سر دوراهی بودم، کلام پدر نور راهنمام بود. به انتخاب‌هام احترام می‌ذاشت.</p>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-dot" aria-hidden="true"></div>
+                <div class="tl-badge">امروز</div>
+                <h4>جشن تولد پدر</h4>
+                <p>امروز روز توئه پدر. روزی که طبیعت هم برات جشن گرفته. تولدت مبارک مرتضی جان!</p>
+            </div>
+            <div class="tl-item reveal">
+                <div class="tl-dot" aria-hidden="true"></div>
+                <div class="tl-badge">آینده</div>
+                <h4>سایه‌ات مستدام</h4>
+                <p>آرزو می‌کنم سال‌های سال مثل درخت چنار، سایه‌ات بر سر ما مستدام باشه. دوستت دارم.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     GALLERY COLLAGE
+     ============================================ -->
+<section class="gallery" id="gallery" aria-label="گالری تصاویر">
+    <div class="section-header">
+        <span class="sec-tag reveal">📸 گالری خاطرات</span>
+        <h2 class="sec-title reveal"><span>لحظه‌های</span> ماندگار</h2>
+        <p class="sec-subtitle reveal">تصاویری از زیباترین لحظات زندگی پدر</p>
+    </div>
+    <div class="gal-grid">
+        <div class="gal-item reveal-scale"><img src="pedar2.jpg" alt="خاطره ۱" loading="lazy"></div>
+        <div class="gal-item reveal-scale"><img src="pedar.jpg" alt="خاطره ۲" loading="lazy"></div>
+        <div class="gal-item reveal-scale"><img src="pedaar.jpg" alt="خاطره ۳" loading="lazy"></div>
+        <div class="gal-item reveal-scale"><img src="pedar4.png" alt="خاطره ۴" loading="lazy"></div>
+        <div class="gal-item reveal-scale"><img src="pedar5.jpg" alt="خاطره ۵" loading="lazy"></div>
+        <div class="gal-item reveal-scale"><img src="pedar6.JPG" alt="خاطره ۶" loading="lazy"></div>
+    </div>
+</section>
+
+<!-- ============================================
+     LETTER SECTION
+     ============================================ -->
+<section class="letter-sec" id="letter" aria-label="نامه به پدر">
+    <div class="letter-container">
+        <div class="section-header">
+            <span class="sec-tag reveal">✉️ نامه‌ای از دل</span>
+            <h2 class="sec-title reveal">کلماتی از <span>قلب</span></h2>
+        </div>
+        <div class="envelope reveal-scale">
+            <div class="env-body">
+                <div class="l-stamp" aria-hidden="true">💌</div>
+                <div class="l-date">۱۴۰۵ / ویژه‌ی پدر</div>
+                <div class="l-greet">پدر عزیزم، مرتضی جان</div>
+                <div class="l-body">
+                    <p>نمی‌دونم از کجا شروع کنم، چون کلمات در برابر عظمت عشق تو کم میارن. می‌خوام بدونی که هر نفسی که می‌کشم، هر قدمی که برمی‌دارم، و هر موفقیتی که کسب می‌کنم، مدیون تو و زحمات بی‌دریغته.</p>
+                    <p>تو نه فقط پدرم، بلکه بهترین دوستم، بزرگ‌ترین معلمم و الهام‌بخش‌ترین فرد زندگی منی. هر وقت به گذشته نگاه می‌کنم، می‌بینم که تو همیشه اونجا بودی — در شادی‌ها و غم‌ها، در موفقیت‌ها و شکست‌ها.</p>
+                    <p>ازت ممنونم که بهم یاد دادی قوی باشم، مهربان باشم، و هیچ‌وقت از رویاهام دست نکشم. ممنونم که بهم نشون دادی یه مرد واقعی چطور باید باشه — با عزت، با مهربانی، و با عشق.</p>
+                    <p>تولدت مبارک پدر جان! امیدوارم سال‌های سال با سلامت و شادی در کنارمون باشی. ❤️</p>
+                </div>
+                <div class="l-sign">با تمام عشق، فرزندت ❤️</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     WISHES BOARD
+     ============================================ -->
+<section class="wishes" id="wishes" aria-label="تابلوی آرزوها">
+    <div class="section-header">
+        <span class="sec-tag reveal">📝 تابلوی آرزوها</span>
+        <h2 class="sec-title reveal"><span>پیام‌های</span> تبریک</h2>
+        <p class="sec-subtitle reveal">پیام تبریک تولدت رو برای پدر بنویس</p>
+    </div>
+    <div class="w-form reveal" role="form" aria-label="فرم ارسال پیام تبریک">
+        <div class="f-row">
+            <input type="text" class="f-input" id="wName" placeholder="نام شما" aria-label="نام شما" autocomplete="name">
+            <input type="text" class="f-input" id="wEmoji" placeholder="ایموجی (مثل 🎂)" aria-label="ایموجی" maxlength="4">
+        </div>
+        <textarea class="f-textarea" id="wMsg" placeholder="پیام تبریک خود را بنویسید..." aria-label="پیام تبریک"></textarea>
+        <button class="btn btn-primary" id="wSubmit" style="width:100%;" type="button">
+            <span class="btn-icon" aria-hidden="true">✨</span>
+            <span>ارسال پیام تبریک</span>
+        </button>
+    </div>
+    <div class="sticky-board" id="sBoard" aria-label="پیام‌های تبریک" role="list"></div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer" role="contentinfo">
+    <div class="f-big reveal" data-text="تولدت مبارک پدر جان ❤️">تولدت مبارک<br>پدر جان ❤️</div>
+    <div class="f-bottom">
+        <div class="f-brand">M.S ✦ BIRTHDAY</div>
+        <div class="f-copy">ساخته شده با <span class="f-heart" aria-label="عشق">❤️</span> برای بهترین پدر دنیا — مرتضی سبزی‌پور</div>
+        <div class="f-socials" aria-label="شبکه‌های اجتماعی">
+            <a href="#" class="f-social-link" aria-label="اینستاگرام">📷</a>
+            <a href="#" class="f-social-link" aria-label="تلگرام">✈️</a>
+            <a href="#" class="f-social-link" aria-label="واتساپ">💬</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+/* ============================================
+   JAVASCRIPT - FIXED VERSION (NO PERSISTENCE)
+   ============================================ */
+(function() {
+    'use strict';
+
+    const $ = (sel, ctx = document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+    const raf = requestAnimationFrame.bind(window);
+
+    function randomRange(min, max) { return Math.random() * (max - min) + min; }
+    function randomInt(min, max) { return Math.floor(randomRange(min, max)); }
+    function padZero(n) { return String(n).padStart(2, '0'); }
+    function escapeHtml(str) { const d = document.createElement('div'); d.textContent = str; return d.innerHTML; }
+
+    /* ----------------------------------------
+       LOADER
+       ---------------------------------------- */
+    const loaderEl = $('#loader');
+    const loaderBar = $('#loaderBar');
+    const loaderPercent = $('#loaderPercent');
+    let loadProgress = 0;
+    let loadComplete = false;
+
+    function runLoader() {
+        const interval = setInterval(() => {
+            loadProgress = Math.min(loadProgress + randomRange(3, 10), 100);
+            loaderBar.style.width = loadProgress + '%';
+            if (loaderPercent) loaderPercent.textContent = Math.floor(loadProgress) + '%';
+            if (loadProgress >= 100) {
+                clearInterval(interval);
+                loadComplete = true;
+                setTimeout(() => {
+                    loaderEl.classList.add('hidden');
+                    setTimeout(() => { loaderEl.remove(); showToast('🎉 به جشن تولد پدر خوش آمدید'); initParticles(); }, 800);
+                }, 400);
+            }
+        }, 70);
+    }
+    window.addEventListener('load', () => setTimeout(runLoader, 200));
+
+    /* ----------------------------------------
+       CUSTOM CURSOR
+       ---------------------------------------- */
+    const cDot = $('#cDot'), cRing = $('#cRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouch && cDot && cRing) {
+        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cDot.style.left = mx+'px'; cDot.style.top = my+'px'; });
+        document.addEventListener('mousedown', () => cRing.classList.add('clicking'));
+        document.addEventListener('mouseup', () => cRing.classList.remove('clicking'));
+        (function loop() { rx += (mx-rx)*0.12; ry += (my-ry)*0.12; cRing.style.left = rx+'px'; cRing.style.top = ry+'px'; raf(loop); })();
+        document.addEventListener('mouseover', e => { if(e.target.closest('a,button,.mem-card,.gal-item,.tl-item,.photo-stack,input,textarea')) cRing.classList.add('hovered'); });
+        document.addEventListener('mouseout', e => { if(e.target.closest('a,button,.mem-card,.gal-item,.tl-item,.photo-stack,input,textarea')) cRing.classList.remove('hovered'); });
+    } else {
+        if(cDot) cDot.style.display='none'; if(cRing) cRing.style.display='none';
+        document.body.style.cursor='auto';
+    }
+
+    /* ----------------------------------------
+       NAVBAR & SCROLL
+       ---------------------------------------- */
+    const navbar = $('#navbar');
+    const mobToggle = $('#mobToggle');
+    const navLinks = $('#navLinks');
+    const sections = $$('section[id]');
+    const navAnchors = $$('.nav-links a');
+
+    function toggleMenu() {
+        const open = navLinks.classList.toggle('open');
+        mobToggle.classList.toggle('active', open);
+        mobToggle.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+    mobToggle.addEventListener('click', toggleMenu);
+    navAnchors.forEach(a => a.addEventListener('click', () => { if(navLinks.classList.contains('open')) toggleMenu(); }));
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if(!ticking) { raf(() => {
+            const sy = window.scrollY;
+            navbar.classList.toggle('scrolled', sy > 80);
+            const dh = document.documentElement.scrollHeight - window.innerHeight;
+            $('#progLine').style.width = (dh>0 ? (sy/dh)*100 : 0) + '%';
+            const btt = $('#backToTop'); if(btt) btt.classList.toggle('visible', sy > 600);
+            let cur = '';
+            sections.forEach(s => { if(sy >= s.offsetTop - 200) cur = s.id; });
+            navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+cur));
+            ticking = false;
+        }); ticking = true; }
+    }, {passive:true});
+
+    const btt = $('#backToTop');
+    if(btt) btt.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+    $$('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+            const t = $(this.getAttribute('href'));
+            if(t) window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - navbar.offsetHeight - 20, behavior:'smooth'});
+        });
+    });
+
+    /* ----------------------------------------
+       ⭐ 5-MINUTE TIMER (ALWAYS RESETS) ⭐
+       No localStorage. Always starts fresh.
+       ---------------------------------------- */
+    // Target is ALWAYS 5 minutes from the moment the page loads
+    const TIMER_DURATION_MS = 5 * 60 * 1000; 
+    const timerTarget = Date.now() + TIMER_DURATION_MS;
+    
+    let timerDone = false;
+    const tD = $('#tDays'), tH = $('#tHours'), tM = $('#tMins'), tS = $('#tSecs');
+
+    function updateTimer() {
+        const diff = timerTarget - Date.now();
+        if (diff <= 0) {
+            tD.textContent = '🎉'; tH.textContent = '🎂'; tM.textContent = '✨'; tS.textContent = '❤️';
+            if (!timerDone) { timerDone = true; fireConfetti(); showToast('🎊 زمان جشن فرا رسید! تولدت مبارک!'); }
+            return;
+        }
+        tD.textContent = padZero(Math.floor(diff / 86400000));
+        tH.textContent = padZero(Math.floor((diff % 86400000) / 3600000));
+        tM.textContent = padZero(Math.floor((diff % 3600000) / 60000));
+        tS.textContent = padZero(Math.floor((diff % 60000) / 1000));
+    }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+
+    /* ----------------------------------------
+       SCROLL REVEAL
+       ---------------------------------------- */
+    const revObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('active'); revObs.unobserve(e.target); } });
+    }, {threshold:0.08, rootMargin:'0px 0px -50px 0px'});
+    $$('.reveal,.reveal-l,.reveal-r,.reveal-scale').forEach(el => revObs.observe(el));
+
+    /* ----------------------------------------
+       MEMORY CARDS
+       ---------------------------------------- */
+    $$('.mem-card').forEach(c => {
+        const flip = () => c.classList.toggle('flipped');
+        c.addEventListener('click', flip);
+        c.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') { e.preventDefault(); flip(); } });
+    });
+
+    /* ----------------------------------------
+       PARTICLES
+       ---------------------------------------- */
+    function initParticles() {
+        const cont = $('#heroParticles'); if(!cont) return;
+        const cols = ['#ff6b9d','#c06eff','#3742fa','#00d4ff','#ffa502','#ffd93d'];
+        for(let i=0;i<30;i++) {
+            const p = document.createElement('div'); p.className='particle';
+            const sz = randomRange(2,6);
+            p.style.cssText = `left:${randomRange(0,100)}%;width:${sz}px;height:${sz}px;background:${cols[randomInt(0,cols.length)]};animation-duration:${randomRange(8,20)}s;animation-delay:${randomRange(0,10)}s;opacity:${randomRange(0.2,0.7)};`;
+            cont.appendChild(p);
+        }
+    }
+
+    /* ----------------------------------------
+       PARALLAX
+       ---------------------------------------- */
+    if(!isTouch) {
+        const stacks = $$('.photo-stack'), rots = [6,-8,12];
+        let lastMM = 0;
+        document.addEventListener('mousemove', e => {
+            const now = Date.now(); if(now-lastMM < 16) return; lastMM = now;
+            const x = (e.clientX/window.innerWidth-0.5)*30, y = (e.clientY/window.innerHeight-0.5)*30;
+            stacks.forEach((c,i) => { const f=(i+1)*0.5; c.style.transform=`translate(${x*f}px,${y*f}px) rotate(${rots[i]||0}deg)`; });
+        });
+    }
+
+    /* ----------------------------------------
+       WISHES
+       ---------------------------------------- */
+    const sBoard = $('#sBoard');
+    const noteCls = ['sn-1','sn-2','sn-3','sn-4','sn-5','sn-6'];
+    const defaults = [
+        {n:'فرزندت',t:'پدر عزیزم، تولدت مبارک! تو بهترین هدیه خدایی ❤️',e:'🎂'},
+        {n:'خانواده',t:'پدر جان، ممنون که همیشه پشت ما بودی 🎉',e:'🎉'},
+        {n:'عزیز',t:'مرتضی جان، تو یک قهرمان واقعی هستی',e:'🏆'},
+        {n:'دوست',t:'آقای سبزی‌پور، بهترین پدر دنیا هستید 💐',e:'💐'}
+    ];
+
+    function addNote(name,text,emoji,anim=true) {
+        const n = document.createElement('div');
+        n.className = `sticky-note ${noteCls[randomInt(0,noteCls.length)]}`;
+        n.setAttribute('role','listitem');
+        if(!anim) n.style.animation='none';
+        n.innerHTML = `<div class="sn-name">${emoji} ${escapeHtml(name)}</div><div class="sn-text">${escapeHtml(text)}</div>`;
+        sBoard.insertBefore(n, sBoard.firstChild);
+    }
+
+    defaults.forEach(w => addNote(w.n,w.t,w.e,false));
+
+    // Load saved wishes from PREVIOUS visits (wishes persist, timer doesn't)
+    try { JSON.parse(localStorage.getItem('ms_wishes')||'[]').reverse().forEach(w => addNote(w.n,w.t,w.e,false)); } catch(e){}
+
+    $('#wSubmit').addEventListener('click', () => {
+        const name=$('#wName').value.trim(), msg=$('#wMsg').value.trim(), emoji=$('#wEmoji').value.trim()||'🎂';
+        if(!name||!msg) { showToast('⚠️ لطفاً نام و پیام را وارد کنید'); return; }
+        if(msg.length>500) { showToast('⚠️ پیام خیلی طولانی است'); return; }
+        addNote(name,msg,emoji,true);
+        try { const s=JSON.parse(localStorage.getItem('ms_wishes')||'[]'); s.push({n:name,t:msg,e:emoji}); localStorage.setItem('ms_wishes',JSON.stringify(s.slice(-50))); } catch(e){}
+        $('#wName').value=''; $('#wMsg').value=''; $('#wEmoji').value='';
+        showToast('✨ پیام تبریک ثبت شد'); fireConfetti();
+    });
+
+    /* ----------------------------------------
+       TOAST
+       ---------------------------------------- */
+    let toastTmr;
+    function showToast(msg) {
+        const t=$('#toast'); if(!t)return; clearTimeout(toastTmr);
+        t.textContent=msg; t.classList.add('show');
+        toastTmr=setTimeout(()=>t.classList.remove('show'),4000);
+    }
+
+    /* ----------------------------------------
+       CONFETTI
+       ---------------------------------------- */
+    function fireConfetti() {
+        const cols=['#ff6b9d','#c06eff','#3742fa','#00d4ff','#ffa502','#ffd93d','#2ed573','#ff4757'];
+        for(let i=0;i<150;i++){
+            const c=document.createElement('div'), sz=randomRange(4,14);
+            c.style.cssText=`position:fixed;top:-15px;left:${randomRange(0,100)}%;width:${sz}px;height:${sz}px;background:${cols[randomInt(0,cols.length)]};z-index:99999;pointer-events:none;border-radius:${Math.random()>0.5?'50%':'2px'};animation:confFall ${randomRange(2,5)}s ${randomRange(0,0.5)}s linear forwards;`;
+            document.body.appendChild(c);
+            setTimeout(()=>{if(c.parentNode)c.remove();},6000);
+        }
+    }
+    const cs=document.createElement('style');
+    cs.textContent='@keyframes confFall{0%{transform:translateY(0) rotate(0) scale(1);opacity:1}100%{transform:translateY(105vh) rotate(720deg) scale(0.3);opacity:0}}';
+    document.head.appendChild(cs);
+
+    /* ----------------------------------------
+       DOUBLE CLICK HEARTS
+       ---------------------------------------- */
+    const hearts=['❤️','✨','🎉','💜','💖','🎂','🌟','💫','🥳'];
+    document.addEventListener('dblclick', e => {
+        const el=document.createElement('div');
+        el.textContent=hearts[randomInt(0,hearts.length)];
+        el.style.cssText=`position:fixed;left:${e.clientX}px;top:${e.clientY}px;font-size:${randomRange(1.5,3)}rem;pointer-events:none;z-index:99999;animation:hFloat ${randomRange(1,2)}s ease forwards;`;
+        document.body.appendChild(el);
+        setTimeout(()=>{if(el.parentNode)el.remove();},2000);
+    });
+    const hs=document.createElement('style');
+    hs.textContent='@keyframes hFloat{0%{transform:translate(-50%,-50%) scale(0);opacity:1}50%{transform:translate(-50%,-80px) scale(1.5);opacity:1}100%{transform:translate(-50%,-200px) scale(0.5);opacity:0}}';
+    document.head.appendChild(hs);
+
+    /* ----------------------------------------
+       MISC
+       ---------------------------------------- */
+    const origTitle = document.title;
+    document.addEventListener('visibilitychange', () => {
+        document.title = document.hidden ? '💔 دلم برای پدرم تنگ شده...' : origTitle;
+    });
+    document.addEventListener('keydown', e => {
+        if(e.key==='Escape') {
+            if(navLinks.classList.contains('open')) toggleMenu();
+            $$('.mem-card.flipped').forEach(c=>c.classList.remove('flipped'));
+        }
+    });
+    setTimeout(() => { if(loadComplete) showToast('✨ به جشن تولد مرتضی سبزی‌پور خوش آمدید'); }, 5000);
+
+    console.log('%c🎉 تولد مرتضی سبزی‌پور مبارک! 🎉','background:linear-gradient(135deg,#ff6b9d,#c06eff,#3742fa);color:white;font-size:16px;font-weight:bold;padding:20px;border-radius:12px;');
+})();
+</script>
+</body>
+</html>
